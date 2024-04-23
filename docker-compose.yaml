@@ -1,6 +1,6 @@
 version: "3"
 services:
-  api:
+  app:
     container_name: ruby-sandbox
     platform: linux/amd64
     build:
@@ -8,6 +8,5 @@ services:
     volumes:
       - type: bind
         source: ./
-        target: /api
-    ports:
-      - "3000:3000"
+        target: /app
+    tty: true

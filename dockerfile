@@ -7,7 +7,7 @@ RUN apt-get update -y && apt-get install -y \
   libpq-dev
 
 # Railsアプリケーションを作成するディレクトリを作成
-WORKDIR /api
+WORKDIR /app
 
 # RailsアプリケーションのGem依存関係をインストール
 # COPY Gemfile Gemfile.lock ./
