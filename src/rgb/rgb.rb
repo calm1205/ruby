@@ -4,3 +4,8 @@ def to_hex(r,g,b)
     n.to_s(16).rjust(2, '0')
   end
 end
+
+def to_ints(hex_string)
+  # 16進数を10進数に変換
+  hex_string.scan(/\w\w/).map(&:hex)
+end
