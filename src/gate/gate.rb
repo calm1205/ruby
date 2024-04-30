@@ -24,8 +24,8 @@ class Gate
     :yokohama            # 横浜
   ]
 
-  STATIONS = [:umeda, :juso, :mikuni]
-  FARES = [160, 190]
+  MINIMUM_FARE = 120
+  FARE_PER_STATION = 30
 
   def initialize(station_name:)
     @station_name = station_name
@@ -35,15 +35,20 @@ class Gate
     ticket.stamp(station_name: @station_name)
   end
 
-  def calc_fare(ticket)
-    from = STATIONS.index(ticket.stamped_at)
-    to = STATIONS.index(@station_name)
+  def calc_distance(ticket)
+    from = TOYOKO_STATIONS.index(ticket.stamped_at)
+    to = TOYOKO_STATIONS.index(@station_name)
     distance = (from - to).abs
-    FARES[distance - 1]
+  end
+
+  def calc_fare(distance)
+    MINIMUM_FARE + FARE_PER_STATION * (distance - 1)
   end
 
   def exit(ticket)
-    fare = calc_fare(ticket)
-    fare <= ticket.fare
+    distance = calc_distance(ticket)
+    fare = calc_fare(distance)
+
+    isExitable = fare <= ticket.fare
   end
 end
