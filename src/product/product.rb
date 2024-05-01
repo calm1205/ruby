@@ -30,7 +30,7 @@ class Product
   end
 
   def max_discount_price
-    price * self.class.max_discount_rate
+    price * self.class.max_discount_rate # インスタンスメソッド内でプライベートクラスメソッドは呼べない
   end
 
   private
