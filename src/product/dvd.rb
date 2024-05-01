@@ -13,4 +13,8 @@ class DVD < Product
       #{super}  duration: \t#{@duration} min
     TEXT
   end
+
+  def discounted_price
+    price * discount_rate
+  end
 end

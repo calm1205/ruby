@@ -7,8 +7,16 @@ class Product
     @quantity = quantity
   end
 
+  private_class_method def self.max_discount_rate
+    0.5
+  end
+
   def self.made_in
     "Japan"
+  end
+
+  def self.max_discount
+    self.max_discount_rate
   end
 
   def to_s
@@ -19,5 +27,15 @@ class Product
       units:\t#{@quantity}
       made in:\t#{self.class.made_in}"
     TEXT
+  end
+
+  def max_discount_price
+    price * self.class.max_discount_rate
+  end
+
+  private
+
+  def discount_rate
+    0.8
   end
 end
