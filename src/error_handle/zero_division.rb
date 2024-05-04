@@ -5,6 +5,7 @@ rescue ZeroDivisionError => e
   puts "Error Class: #{e.class}"
   puts "Error Ancestor: #{e.class.ancestors}"
   puts "Error Message: #{e.message}"
+  puts "Error FullMessage: #{e.full_message}"
 
   puts "Backtrace ----- "
   puts e.backtrace
