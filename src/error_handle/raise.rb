@@ -1,9 +1,17 @@
-puts 'Start'
-
-begin
-  1 + '10'
-rescue => e
-  puts "Error: #{e}"
+def currency_of(country)
+  case country
+  when :japan
+    'yen'
+  when :us
+    'dollar'
+  when :india
+    'rupee'
+  else
+    # raise "無効な国名です。#{country}" # raiseメソッドで例外を発生させる(RuntimeError)
+    raise ArgumentError, "無効な国名です。#{country}"
+    raise ArgumentError.new("無効な国名です。#{country}")
+  end
 end
 
-puts 'End'
+currency_of(:japan) # => "yen"
+currency_of(:italy) # => RuntimeError: 無効な国名です。italy
