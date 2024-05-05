@@ -4,6 +4,4 @@ def greet
   puts "Goodbye"
 end
 
-greet do
-  puts "My friend"
-end
+greet { puts "My friend" }

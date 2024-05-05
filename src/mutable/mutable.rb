@@ -1,4 +1,4 @@
-array = Array.new(5){ "default"}
+array = Array.new(5) { "default" }
 
 first = array[0]
 first.upcase!

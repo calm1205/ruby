@@ -1,6 +1,6 @@
 require "minitest/autorun"
-require_relative 'gate'
-require_relative 'ticket'
+require_relative "gate"
+require_relative "ticket"
 
 class GateTest < Minitest::Test
   def setup

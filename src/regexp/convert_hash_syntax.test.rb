@@ -1,8 +1,7 @@
 require "minitest/autorun"
-require_relative 'convert_hash_syntax'
+require_relative "convert_hash_syntax"
 
 class ConvertHashSyntaxTest < Minitest::Test
-
   def test_convert_hash_syntax
     original_syntax = <<~TEXT
       {

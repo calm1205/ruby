@@ -1,7 +1,7 @@
 retry_count = 0
 
 begin
-  puts '--- execute ---'
+  puts "--- execute ---"
   1 / 0
 rescue ZeroDivisionError => e
   if retry_count < 3
@@ -10,5 +10,4 @@ rescue ZeroDivisionError => e
     retry
   end
   puts "Error: #{e.message}"
-
 end

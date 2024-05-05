@@ -1,8 +1,8 @@
-require_relative 'product'
-require_relative 'dvd'
+require_relative "product"
+require_relative "dvd"
 
-product = Product.new('An awesome film', 1000, 3)
-dvd = DVD.new('An awesome film', 1000, 3, 120)
+product = Product.new("An awesome film", 1000, 3)
+dvd = DVD.new("An awesome film", 1000, 3, 120)
 puts dvd.to_s
 
 puts

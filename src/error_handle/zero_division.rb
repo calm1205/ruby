@@ -10,7 +10,6 @@ rescue ZeroDivisionError => e
   puts "Backtrace ----- "
   puts e.backtrace
   puts "-----"
-
 rescue NoMethodError => e
   puts "Error Class: #{e.class}"
   puts "Error Message: #{e.message}"
@@ -18,7 +17,6 @@ rescue NoMethodError => e
   puts "Backtrace ----- "
   puts e.backtrace
   puts "-----"
-
 rescue => e
   puts "Error Class: #{e.class}"
   puts "Error Message: #{e.message}"

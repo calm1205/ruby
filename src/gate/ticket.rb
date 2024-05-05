@@ -1,5 +1,4 @@
 class Ticket
-
   attr_reader :fare, :stamped_at
 
   # fare: チケットの購入金額

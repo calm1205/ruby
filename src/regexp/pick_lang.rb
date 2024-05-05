@@ -1,4 +1,3 @@
-
 text = <<TEXT
 I love Ruby.
 Python is a great language.

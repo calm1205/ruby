@@ -1,11 +1,11 @@
 def currency_of(country)
   case country
   when :japan
-    'yen'
+    "yen"
   when :us
-    'dollar'
+    "dollar"
   when :india
-    'rupee'
+    "rupee"
   else
     # raise "無効な国名です。#{country}" # raiseメソッドで例外を発生させる(RuntimeError)
     raise ArgumentError, "無効な国名です。#{country}"
