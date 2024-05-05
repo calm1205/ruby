@@ -13,4 +13,6 @@ class FizzBuzzTest
   def test_fizz: -> untyped
   def test_buzz: -> untyped
   def test_fizz_buzz: -> untyped
+  def assert_equal: (untyped, untyped) -> void
+  def assert_nil: (untyped) -> void
 end
