@@ -8,3 +8,5 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 gem "debug"
 gem "faker"
 gem "awesome_print"
+gem "rbs", "3.4.4"
+gem "steep"

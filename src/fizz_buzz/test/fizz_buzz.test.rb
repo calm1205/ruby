@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require_relative "./fizz_buzz"
+require_relative "../lib/fizz_buzz"
 
 class FizzBuzzTest < Minitest::Test
   # minitestはtest_で始まるメソッドをテストメソッドとして認識

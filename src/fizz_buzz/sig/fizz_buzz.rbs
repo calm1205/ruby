@@ -1,0 +1,16 @@
+# Global variables
+$DEBUG_RDOC: nil
+
+# Classes
+class Object
+  private
+  def fizz: (Integer n) -> String?
+  def buzz: (Integer n) -> String?
+  def fizz_buzz: (Integer n) -> (Integer | String)
+end
+
+class FizzBuzzTest
+  def test_fizz: -> untyped
+  def test_buzz: -> untyped
+  def test_fizz_buzz: -> untyped
+end
