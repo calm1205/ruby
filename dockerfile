@@ -8,3 +8,5 @@ RUN apt-get update -y && apt-get install -y \
 
 # アプリケーションを作成するディレクトリを作成
 WORKDIR /app
+
+RUN gem install debug
