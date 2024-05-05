@@ -8,8 +8,6 @@ class WordSynth
   end
 
   def play(original_words)
-    words = original_words
-    @effects.each { |effect| words = effect.call(words) }
-    words
+    @effects.inject(original_words) { |words, effect| effect.call(words) }
   end
 end
