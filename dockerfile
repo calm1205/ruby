@@ -6,10 +6,5 @@ RUN apt-get update -y && apt-get install -y \
   build-essential \
   libpq-dev
 
-# Railsアプリケーションを作成するディレクトリを作成
+# アプリケーションを作成するディレクトリを作成
 WORKDIR /app
-
-# RailsアプリケーションのGem依存関係をインストール
-# COPY Gemfile Gemfile.lock ./
-# COPY Gemfile ./
-# RUN bundle install
