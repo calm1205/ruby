@@ -1,0 +1,15 @@
+task :default do
+  puts "default task"
+end
+
+namespace :my_task do
+  desc "Prints 'Hello, World!'"
+  task :hello_world do
+    puts "Hello, World!"
+  end
+
+  desc "Prints 'Hello!'"
+  task :greet do
+    puts "Hello!"
+  end
+end
