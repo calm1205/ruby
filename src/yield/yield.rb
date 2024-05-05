@@ -1,7 +1,9 @@
 def greet
   puts "Hello"
-  yield
+
+  text = yield("こんにちは") if block_given?
+  puts text
   puts "Goodbye"
 end
 
-greet { puts "My friend" }
+greet { |t| t * 2 }
